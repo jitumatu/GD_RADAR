@@ -91,7 +91,7 @@ s = np.fft.ifft( S, axis = 0).flatten() # inverse discrete Zak transform
 
 
 # additive white Gaussian noise
-SNR_in_dB = 40
+SNR_in_dB = -10
 SNR = 10**(SNR_in_dB/10)
 sigma =  np.linalg.norm(s) * np.sqrt( 1 / L / SNR / 2 )
 noise = sigma * ( np.random.randn( N_terminals, L ) + 1j * np.random.randn( N_terminals, L ) )
